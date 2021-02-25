@@ -1,0 +1,80 @@
+.ContactsList-search{
+    margin-bottom: 2vmin;
+    width:80%;
+    outline:none;
+    background-color:#7a86a1;
+    border:none;
+    border-bottom: 1px solid black;
+    color:rgb(197, 205, 212);
+    letter-spacing: 0.3vmin;
+}
+
+.ContactsList-search::placeholder{
+    color:rgba(0, 0, 0, 0.555);
+}
+
+.ContactsList{
+    text-align: center;
+    justify-self: flex-start;
+    color:rgb(197, 205, 212);
+    
+}
+
+.ContactsList h1{
+    font-size: 5vmin;
+    letter-spacing: 0.3vmin;
+    color:rgb(197, 205, 212);
+}
+
+.ContactsList-radios{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin:2vmin 0;
+}
+
+.ContactsList-radios label{
+    display: flex;
+    align-items: center;
+    text-shadow: 0.5px 0.5px 0.5px black, -0.5px -0.5px 0.5px black;
+}
+
+.ContactsList-radios input{
+    appearance: none;
+    outline:none;
+    border:none;
+    position: relative;
+    width:6vmin;
+    height:2vmin;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin-right: 2vmin;
+    margin-left: 1vmin;
+    cursor: pointer;
+}
+
+.ContactsList-radios input::before{
+    content: "";
+    position: absolute;
+    width:2vmin;
+    height:2vmin;
+    background-color:rgb(197, 205, 212);
+    border-radius: 50%;
+    left:-2%;
+    transition:left 0.2s linear;
+}
+
+.ContactsList-radios input:checked::before{
+    left:70%;
+}
+.ContactsList-radios input:checked{
+    background-color:#45a164;
+}
+
+
+
+@media (max-width:800px){
+    .ContactsList{
+        justify-self: center;
+    }
+}

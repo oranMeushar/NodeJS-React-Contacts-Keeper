@@ -1,0 +1,73 @@
+.ContactCard{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-column-gap: 2vmin;
+    justify-items: flex-start;
+    margin:0 auto 2vmin auto;
+    width:70vmin;
+    box-shadow: inset -0.1rem -0.1rem 1rem #608088, inset 0.1rem 0.1rem 1rem #608088 ;
+    padding:2vmin;
+    color:rgb(197, 205, 212);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ContactCard-detail{
+    display: flex;
+    align-items: center;
+    font-size: 2vmin;
+    letter-spacing: 0.3vmin;  
+    margin:4vmin 0;  
+}
+
+.ContactCard-detail img{
+    width:3vmin;
+    height:3vmin;
+    margin-right: 2vmin;
+}
+
+
+.ContactCard-buttons{
+    grid-column: 1/-1;
+    justify-self: center;
+    outline:none;
+    
+}
+
+.ContactCard-buttons button{
+    padding:1vmin 2vmin;
+    border-radius: 0.5rem;
+    color:rgb(64, 68, 71);
+    cursor: pointer;
+    outline: none;
+    border:none;
+    position:relative;
+    overflow: hidden;
+    transition:transform 0.3s linear;
+}
+
+.ContactCard-buttons button:active{
+    transform:translateY(4%);
+}
+.ContactCard-buttons button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: -100%;
+    background-image: linear-gradient(to left,transparent, rgba(255, 255, 255, 0.822), transparent);
+    transition: left 1s;
+}
+
+.ContactCard-buttons button:hover::before{
+    left: 100%;
+}
+
+
+.ContactCard-edit{
+    margin-right: 2vmin;
+    background-color: #a1957a;
+}
+.ContactCard-delete{
+    background-color: #ac7373;
+}

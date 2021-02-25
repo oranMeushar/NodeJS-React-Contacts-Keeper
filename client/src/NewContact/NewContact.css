@@ -1,0 +1,78 @@
+.NewContact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width:fit-content;
+    color:rgb(197, 205, 212);
+    box-shadow: inset -0.3rem -0.5rem 1rem rgba(0, 0, 0, 0.356);;
+    padding:4vmin;
+}
+.NewContact-form h1{
+    align-self: center;
+    letter-spacing: 0.3vmin;
+}
+
+.NewContact-form input{
+   background-color:#7a86a1; 
+   color:rgb(197, 205, 212);
+   font-size: 3vmin;
+   letter-spacing: 0.3vmin;
+   outline:none;
+   border:none;
+   border-bottom: 1px solid black;
+   margin-left: 2vmin;
+   font-family: 'Open Sans', sans-serif;
+   font-weight:600;
+   letter-spacing:0.5vmin;
+}
+
+.NewContact-form label{
+    margin: 2vmin 0;
+    font-size:3vmin;
+ }
+
+.NewContact-submit{
+    background-color: rgb(98, 130, 167);
+    border:none;
+    outline:none;
+    border:1px solid rgb(45, 129, 207);
+    padding:1vmin;
+    border-radius: 0.5rem;
+    color:rgb(197, 205, 212);
+    cursor: pointer;
+    align-self: center;
+    transition:transform 0.3s linear;
+    overflow:hidden;
+    position: relative;
+}
+
+.NewContact-submit::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: -100%;
+    background-image: linear-gradient(to left,transparent, rgba(255, 255, 255, 0.822), transparent);
+    transition: left 1s;
+}
+
+.NewContact-submit:hover::before{
+    left: 100%;
+}
+
+.NewContact-submit:active{
+    transform: translateY(4%);
+}
+
+ .NewContact-error{
+    width:fit-content;
+    background-color: rgb(212, 112, 112);
+    color:rgb(77, 68, 68);
+    font-size:3vmin;
+    letter-spacing: 0.3vmin;
+    padding:1vmin 2vmin;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+ }
